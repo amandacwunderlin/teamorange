@@ -41,5 +41,5 @@ class ExampleController < ApplicationController
         service.authorization = client
     
         @calendar_list = service.list_calendar_lists
-  end
+    end
 end
