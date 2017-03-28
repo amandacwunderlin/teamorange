@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/redirect', to: 'example#redirect', as: 'redirect'
   get '/callback', to: 'example#callback', as: 'callback'
+  get '/calendars', to: 'example#calendars', as: 'calendars'
   get 'sessions/create'
   delete '/logout', to: 'sessions#destroy'
 
