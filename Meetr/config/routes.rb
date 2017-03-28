@@ -1,4 +1,4 @@
-Rottenpotatoes::Application.routes.draw do
+Meetr::Application.routes.draw do
   resources :Meetr
 
   root :to => redirect('/Meetr')
