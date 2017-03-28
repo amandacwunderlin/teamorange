@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  
+  root to: 'pages#index'
+  get '/auth/:provider/callback', to: 'sessions#create'
+  
   get 'sessions/create'
-
-  get 'pages/index'
   delete '/logout', to: 'sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -58,6 +60,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-root to: 'pages#index'
-get '/auth/:provider/callback', to: 'sessions#create'
+
 end
