@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.7.1'
 
 gem 'bootstrap-sass', '3.2.0.2'
+gem 'omniauth-twitter'
 group :development do
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

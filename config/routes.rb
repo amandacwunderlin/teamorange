@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/create'
+
   get 'pages/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -56,4 +58,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 root to: 'pages#index'
+get '/auth/:provider/callback', to: 'sessions#create'
 end
