@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   
   root to: 'pages#index'
   get '/auth/:provider/callback', to: 'sessions#create'
-  
+  get '/redirect', to: 'example#redirect', as: 'redirect'
+  get '/callback', to: 'example#callback', as: 'callback'
   get 'sessions/create'
   delete '/logout', to: 'sessions#destroy'
 
