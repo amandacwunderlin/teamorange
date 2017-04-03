@@ -40,8 +40,21 @@ class ExampleController < ApplicationController
         service = Google::Apis::CalendarV3::CalendarService.new
         service.authorization = client
     
-        @calendar_list = service.list_calendar_lists
-        @event_list = client.get_event('primary')
+        api_client = Google::APIClient.new
+        cal = api_client.discovered_api('calendar', 'v3')
+        
+        #Get Event List
+        
+        list = api_client.execute(:api_method => cal.events.list, 
+                                  :authorization => auth_client,
+                                  :parameters => {
+                                      'maxResults' => 20, 
+                                      'timeMin' => '2014-06-18T03:12:24-00:00', 
+                                      'q' => 'Meeting', 
+                                      'calendarId' => 'primary'
+                                    
+                                                  }
+                                  )
 
         
     end
