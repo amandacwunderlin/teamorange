@@ -205,7 +205,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.3.1)
   coffee-rails (~> 4.1.0)
-  google-api-client
+  google-api-client (~> 0.9)
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-twitter
