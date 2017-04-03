@@ -41,7 +41,7 @@ class ExampleController < ApplicationController
         service.authorization = client
     
         @calendar_list = service.list_calendar_lists
-        @event_list = service.list_events(primary)
+        @event_list = service.list_events('primary')
         
     end
     
