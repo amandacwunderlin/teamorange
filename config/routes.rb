@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   get '/calendars', to: 'example#calendars', as: 'calendars'
   
   get 'sessions/create'
-  delete '/logout', to: 'sessions#destroy'
-
+  delete '/logout', to: 'sessions#destroy', as: 'logout'
+  get '/events/:calendar_id', to: 'example#events', as: 'events', calendar_id: /[^\/]+/
+  post '/events/:calendar_id', to: 'example#new_event', as: 'new_event', calendar_id: /[^\/]+/
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
