@@ -19,10 +19,19 @@
 
 <body>
     <ul>
-  <% @calendar_list.items.each do |calendar| %>
-    <li><%= calendar.summary %> (<%= calendar.id %>)</li>
-  <% end %>
-</ul>
-
+      <% @calendar_list.items.each do |calendar| %>
+        <li><%= calendar.summary %> (<%= calendar.id %>)</li>
+      <% end %>
+    </ul>
+    
+    (<%= calendar.id %>)
+    <ul>
+      <% @event_list.items.each do |event| %>
+        <li><%= event.start %> </li>
+        
+        <li><%= event.summary %> </li>
+      <% end %>
+    </ul>
+ 
 </body>
 </html>
