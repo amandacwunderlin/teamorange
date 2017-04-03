@@ -6,7 +6,7 @@ gem 'rails', '4.2.7.1'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
-gem 'google-api-client', require: 'google/apis/calendar_v3', require: 'google/api_client'
+gem 'google-api-client', require: 'google/api_client'
 gem 'omniauth-twitter'
 group :development do
 # Use sqlite3 as the database for Active Record
