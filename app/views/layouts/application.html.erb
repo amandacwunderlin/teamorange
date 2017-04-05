@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<<<<<<<<< saved version
 <html lang='en'>
 <head>
-  <title>SocialFreak</title>
+  <title>Meetr</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -19,7 +20,7 @@
           <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
         </ul>
         <ul class="nav navbar-nav">
-          <li><%= link_to 'Add Event', '/events/:calendar_id' %></li>
+          <li><%= link_to 'Create a Meeting', '/events/:calendar_id' %></li>
         </ul>
       <% else %>
         <ul class="nav navbar-nav">
@@ -46,4 +47,25 @@
 <%= yield %>
 
 </body>
+=========
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Social Freak" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Social Freak" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </main>
+    
+  </body>
+>>>>>>>>> local version
 </html>
