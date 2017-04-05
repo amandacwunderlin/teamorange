@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy', as: 'logout'
   get '/events/:calendar_id', to: 'example#events', as: 'events', calendar_id: /[^\/]+/
   post '/events/:calendar_id', to: 'example#new_event', as: 'new_event', calendar_id: /[^\/]+/
+  
+  
   get '/create', to: 'example#create', as: 'create'
   
   
