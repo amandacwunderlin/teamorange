@@ -24,39 +24,60 @@
             <h1>Meetr</h1>
                 <p class="lead", align = 'center'><i>Create Your Meetings</i></p>
             <br>
-      <form>
-      <fieldset>
-        <legend>Meeting Form</legend>
-        <p align = 'center'>
-          <h5>Meeting Title</h5>
-          <input type = "text"
-                id = "tile">
-        </p>
-        <p align = 'center'>
-          <h5>Date</h5>
-          <input type = "text"
-                 value = "mm/dd/yyyy"
-                 id = "date">
-        </p>
-        <p align = 'center'>
-          <h5>Time</h5>
-          <input type = "text"
-                 value = "hh:mm am/pm"
-                 id = "time">
-        </p>
-        <p align = 'center'>
-          <h5>Location</h5>
-          <input type = "text"
-                id= "location">
-        </p>
-        <p align = 'center'>
-          <h5>Description</h5>
-          <input type = "tex"
-                id = "description">
-          <textarea cols="50"> 
-          </textarea>
-        </p>
-      </fieldset>
+ <h1>Create a Meeting</h1>
+    <form >
+    <table>
+        <tr>
+            <td>Meeting ID:</td>
+            <td><input type="text" name="meetingId" required autofocus/></td>
+        </tr>
+        <tr>
+            <td>Meeting Title</td>
+            <td><input type="text" name="meetingTitle" required autofocus/></td>
+        </tr>
+        <tr>
+            <td>Meeting Description:</td>
+            <td><input type="text" name="meetingDesription" required/></td>
+        </tr>
+        <tr>
+            <td>Location:</td>
+            <td><input type="text" name="meetingLocation" required/></td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td><input type="text" name="date" required/></td>
+        </tr>
+        <tr>
+            <td>Meeting Type:</td>
+            <td>
+            <select name="state" required>
+              <option value="Safety">Safety</option>
+            	<option value="Info">Informative</option>
+            	<option value="New Hire">New Hire</option>
+            	<option value="Administrative">Admin</option>
+            	<option value="Misc">Misc</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Admin Phone:</td>
+            <td><input type="text" name="phone" required/></td>
+        </tr>
+        <tr>
+            <td>Admin Email:</td>
+            <td><input type="email" name="email" required/></td>
+        </tr>
+        <tr>
+            <td>Preffered Contact:</td>
+            <td>
+                <label><input type="radio" name="contact" value="mail"/> Mail</label>
+                <label><input type="radio" name="contact" value="phone"/> Phone</label>
+                <label><input type="radio" name="contact" value="email"/> Email</label>
+                <label><input type="radio" name="contact" value="any" checked/> Any</label>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit">
     </form>
                 <br>
             <p style="font-size:75%;", align = "left"> </p>
