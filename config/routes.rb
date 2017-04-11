@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy', as: 'logout'
   get '/events/:calendar_id', to: 'example#events', as: 'events', calendar_id: /[^\/]+/
   post '/events/:calendar_id', to: 'example#new_event', as: 'new_event', calendar_id: /[^\/]+/
-  get '/events/create', to: 'example#create_event', as: 'create_event'
+  get '/events/create', to: 'pages#create_event', as: 'create_event'
   
   
   # The priority is based upon order of creation: first created -> highest priority.
