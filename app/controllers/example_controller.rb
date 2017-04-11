@@ -88,6 +88,6 @@ class ExampleController < ApplicationController
       redirect_to events_url(calendar_id: params[:calendar_id])
     end
     
-    def create
+    def create_event
     end
 end
