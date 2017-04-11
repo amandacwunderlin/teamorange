@@ -78,7 +78,7 @@ class ExampleController < ApplicationController
   
       
       
-      @event = {
+      event = {
         'summary' => 'New Event Title',
         'description' => 'The description',
         'location' => 'Location',
@@ -89,9 +89,9 @@ class ExampleController < ApplicationController
       
       
       
-      @set_event = client.execute(:api_method => service.events.insert,
+      set_event = client.execute(:api_method => client.events.insert,
                               :parameters => {'calendarId' => 'primary', 'sendNotifications' => true},
-                              :body => JSON.dump(@event),
+                              :body => JSON.dump(event),
                               :headers => {'Content-Type' => 'application/json'})
       
             
