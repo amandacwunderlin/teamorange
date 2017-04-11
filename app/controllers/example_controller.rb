@@ -75,17 +75,41 @@ class ExampleController < ApplicationController
       service = Google::Apis::CalendarV3::CalendarService.new
       service.authorization = client
   
-      today = Date.today
   
-      event = Google::Apis::CalendarV3::Event.new({
-        start: Google::Apis::CalendarV3::EventDateTime.new(date: today),
-        end: Google::Apis::CalendarV3::EventDateTime.new(date: today + 1),
-        summary: 'New event!'
-      })
-  
-      service.insert_event(params['primary'], event)
-  
+      
+      
+      event = Google::Apis::CalendarV3::Event.new{
+        summary: 'Google I/O 2015',
+        location: '800 Howard St., San Francisco, CA 94103',
+        description: 'A chance to hear more about Google\'s developer products.',
+        start: {
+          date_time: '2015-05-28T09:00:00-07:00',
+          time_zone: 'America/Los_Angeles',
+        },
+        end: {
+          date_time: '2015-05-28T17:00:00-07:00',
+          time_zone: 'America/Los_Angeles',
+        },
+        recurrence: [
+          'RRULE:FREQ=DAILY;COUNT=2'
+        ],
+        attendees: [
+          {email: 'lpage@example.com'},
+          {email: 'sbrin@example.com'},
+        ],
+        reminders: {
+          use_default: false,
+          overrides: [
+            {method' => 'email', 'minutes: 24 * 60},
+            {method' => 'popup', 'minutes: 10},
+          ],
+        },
+      }
+      
+      service = client.insert_event('primary', event)
       redirect_to events_url(calendar_id: params['primary'])
+
+      
     end
     
     def create_event
