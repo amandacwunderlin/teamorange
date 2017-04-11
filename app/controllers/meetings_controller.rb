@@ -12,7 +12,7 @@ class MeetingsController < ApplicationController
     end
     
     private
-    def student_params
+    def meeting_params
       params.require(:meeting).permit(:startdate, :enddate)
     end
     
