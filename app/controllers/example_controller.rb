@@ -96,14 +96,8 @@ class ExampleController < ApplicationController
         attendees: [
           {email: 'lpage@example.com'},
           {email: 'sbrin@example.com'},
-        ],
-        reminders: {
-          use_default: false,
-          overrides: [
-            {method' => 'email', 'minutes: 24 * 60},
-            {method' => 'popup', 'minutes: 10},
-          ],
-        },
+        ]
+        
       }
       
       service = client.insert_event('primary', event)
