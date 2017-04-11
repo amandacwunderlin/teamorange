@@ -41,14 +41,12 @@ class ExampleController < ApplicationController
         service.authorization = client
     
         @calendar_list = service.list_calendar_lists
-        @event_list = service.list_events({
-          'calendarId': 'primary',
-          'timeMin': (new Date()).toISOString(),
-          'showDeleted': false,
+        @event_list = service.list_events(
+          'calendarId': 'primary', 'showDeleted': false,
           'singleEvents': true,
-          'maxResults': 20,
+          'maxResults': 1,
           'orderBy': 'startTime'
-        });
+        )
 
 
         
