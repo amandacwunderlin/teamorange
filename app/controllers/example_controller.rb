@@ -42,7 +42,7 @@ class ExampleController < ApplicationController
     
         @calendar_list = service.list_calendar_lists
         @event_list = service.list_events('primary',
-                               max_results: 10,
+                               max_results: 50,
                                single_events: true,
                                order_by: 'startTime',
                                time_min: Time.now.iso8601)
