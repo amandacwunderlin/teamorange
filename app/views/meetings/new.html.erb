@@ -9,8 +9,8 @@
 
 Testing..<br />
 
-<% if !@meetings.blank? %>
-    <% for item in @meetings %>
+
+<% @meetings.each do |item| %>
         <%= item.startdate %> <br />
         <%= item.enddate %><br />
         <%= item.summary %><br />

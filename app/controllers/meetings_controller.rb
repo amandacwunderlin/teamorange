@@ -1,7 +1,7 @@
 class MeetingsController < ApplicationController
     def new
        @meeting = Meeting.new 
-       #@meetings = Meeting.find(:all)
+       @meetings = Meeting.all
     end
     
     def create
