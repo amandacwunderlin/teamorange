@@ -6,7 +6,9 @@ class MeetingsController < ApplicationController
     
     def create
         @meeting = Meeting.new(params.require(:meeting).permit(:startdate, :enddate, :summary))
-        render text: @meeting.inspect 
+        if @meeting.save
+            redirect_to new_meeting_url
+        end
     end
     
     
