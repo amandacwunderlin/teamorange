@@ -85,7 +85,7 @@ class ExampleController < ApplicationController
       
       
       result = service.insert_event('primary', event)
-      puts "Event created: #{result.html_link}"
+      redirect_to calendars_url
             
     end
     
