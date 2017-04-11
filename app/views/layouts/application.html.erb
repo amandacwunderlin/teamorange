@@ -35,6 +35,9 @@
         <li><%= link_to 'Google', '/redirect' %></li>
       </ul>
     </div>
+    <%= form_tag new_event_url do %>
+    <%= submit_tag 'Add event' %>
+    <% end %>
   </div>
 </nav>
 <div class="container">
