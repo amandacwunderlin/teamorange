@@ -83,9 +83,9 @@ class ExampleController < ApplicationController
         summary: 'New event!'
       })
   
-      service.insert_event(params[:calendar_id], event)
+      service.insert_event(params['primary'], event)
   
-      redirect_to events_url(calendar_id: params[:calendar_id])
+      redirect_to events_url(calendar_id: params['primary'])
     end
     
     def create_event
