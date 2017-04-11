@@ -1,0 +1,18 @@
+<hr>
+<%= form_for @meeting do |f| %>
+  Start Date: <%= f.text_field :startdate %><br />
+  End Date : <%= f.text_field :enddate %><br />
+  Summary : <%= f.text_area :summary %><br />
+  <%= f.submit %>
+<% end %>
+
+
+Testing..<br />
+
+<% if !@meetings.blank? %>
+    <% for item in @meetings %>
+        <%= item.startdate %> <br />
+        <%= item.enddate %><br />
+        <%= item.summary %><br />
+    <% else %>
+<% end %>

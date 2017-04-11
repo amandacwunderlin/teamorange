@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/callback', to: 'example#callback', as: 'callback'
   get '/calendars', to: 'example#calendars', as: 'calendars'
   
+  resources :meetings
+  
   get 'sessions/create'
   delete '/logout', to: 'sessions#destroy', as: 'logout'
   get '/events/:calendar_id', to: 'example#events', as: 'events', calendar_id: /[^\/]+/
