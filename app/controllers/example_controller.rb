@@ -99,8 +99,8 @@ class ExampleController < ApplicationController
           overrides: [
             {method => 'email', 'minutes: 24 * 60},
             {method => 'popup', 'minutes: 10},
-          ],
-        },
+          ]
+        }
       }
       
       result = client.insert_event('primary', event)
