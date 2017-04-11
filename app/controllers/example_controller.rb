@@ -41,7 +41,11 @@ class ExampleController < ApplicationController
         service.authorization = client
     
         @calendar_list = service.list_calendar_lists
-        @event_list = service.list_events('primary')
+        @event_list = service.list_events('primary',
+                               max_results: 50,
+                               single_events: true,
+                               order_by: 'startTime',
+                               time_min: Time.now.iso8601)
 
 
         
@@ -74,18 +78,19 @@ class ExampleController < ApplicationController
   
       service = Google::Apis::CalendarV3::CalendarService.new
       service.authorization = client
-  
+      
       today = Date.today
-  
+
       event = Google::Apis::CalendarV3::Event.new({
         start: Google::Apis::CalendarV3::EventDateTime.new(date: today),
         end: Google::Apis::CalendarV3::EventDateTime.new(date: today + 1),
         summary: 'New event!'
       })
-  
-      service.insert_event(params[:calendar_id], event)
-  
-      redirect_to events_url(calendar_id: params[:calendar_id])
+      
+      
+      result = service.insert_event('primary', event)
+      redirect_to calendars_url
+            
     end
     
     def create

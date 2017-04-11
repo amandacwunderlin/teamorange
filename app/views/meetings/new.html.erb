@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Bootstrap Starter</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    /*CUSTOM CODE HERE*/
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="text-center">
+            <h1>Meetr</h1>
+                <p class="lead", align = 'center'><i>Create Your Meetings</i></p>
+            <br>
+ <h1>Create a Meeting</h1>
+    <form >
+    <table>
+        <tr>
+            <td>Meeting ID:</td>
+            <td><input type="text" name="meetingId" required autofocus/></td>
+        </tr>
+        <tr>
+            <td>Meeting Title</td>
+            <td><input type="text" name="meetingTitle" required autofocus/></td>
+        </tr>
+        <tr>
+            <td>Meeting Description:</td>
+            <td><input type="text" name="meetingDesription" required/></td>
+        </tr>
+        <tr>
+            <td>Location:</td>
+            <td><input type="text" name="meetingLocation" required/></td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td><input type="text" name="date" required/></td>
+        </tr>
+        <tr>
+            <td>Meeting Type:</td>
+            <td>
+            <select name="state" required>
+              <option value="Safety">Safety</option>
+            	<option value="Info">Informative</option>
+            	<option value="New Hire">New Hire</option>
+            	<option value="Administrative">Admin</option>
+            	<option value="Misc">Misc</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Admin Phone:</td>
+            <td><input type="text" name="phone" required/></td>
+        </tr>
+        <tr>
+            <td>Admin Email:</td>
+            <td><input type="email" name="email" required/></td>
+        </tr>
+        <tr>
+            <td>Preffered Contact:</td>
+            <td>
+                <label><input type="radio" name="contact" value="mail"/> Mail</label>
+                <label><input type="radio" name="contact" value="phone"/> Phone</label>
+                <label><input type="radio" name="contact" value="email"/> Email</label>
+                <label><input type="radio" name="contact" value="any" checked/> Any</label>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit">
+    <%= form_tag new_event_path do %>
+    <%= submit_tag 'Add event' %>
+    <% end %>
+    </form>
+                <br>
+            <p style="font-size:75%;", align = "left"> </p>
+            <br>
+            <button type="button" onclick ="alert('Meeting Added!')">Add</button>
+            <button type="button">Cancel</button>
+                <br>
+                <br>
+            <button type="button">Invite Members</button>
+        </div>
+    </div>
+
+    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    <%= form_for @meeting do |f| %>
+      Start Date: <%= f.text_field :startdate %><br />
+      End Date : <%= f.text_field :enddate %><br />
+      Summary : <%= f.text_area :summary %><br />
+      <%= f.submit %>
+    <% end %>
+
+</body>
+</html>
+
+
+Testing..<br />
+
+
+<% @meetings.each do |item| %>
+        <%= item.startdate %> <br />
+        <%= item.enddate %><br />
+        <%= item.summary %><br />
+    
+<% end %>
