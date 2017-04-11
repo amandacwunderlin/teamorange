@@ -7,3 +7,12 @@
 <% end %>
 
 
+Testing..<br />
+
+<% if !@meetings.blank? %>
+    <% for item in @meetings %>
+        <%= item.startdate %> <br />
+        <%= item.enddate %><br />
+        <%= item.summary %><br />
+    <% else %>
+<% end %>
