@@ -19,6 +19,7 @@ group :production do
   gem 'rails_12factor'
   gem 'puma'
   gem 'rails_layout'
+  gem 'chronic'
 end
 
 
