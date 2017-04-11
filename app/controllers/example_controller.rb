@@ -78,7 +78,7 @@ class ExampleController < ApplicationController
   
       
       
-      event = Google::Apis::CalendarV3::Event.new{
+      event = Google::Apis::CalendarV3::Event.new({
         summary: 'Google I/O 2015',
         location: '800 Howard St., San Francisco, CA 94103',
         description: 'A chance to hear more about Google\'s developer products.',
@@ -98,7 +98,7 @@ class ExampleController < ApplicationController
           {email: 'sbrin@example.com'},
         ]
         
-      }
+      })
       
       service = client.insert_event('primary', event)
       redirect_to events_url(calendar_id: params['primary'])
