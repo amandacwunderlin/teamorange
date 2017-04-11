@@ -100,9 +100,10 @@ class ExampleController < ApplicationController
         
       })
       
-      service = client.insert_event('primary', event)
-      redirect_to events_url(calendar_id: params['primary'])
-
+      #service = service.insert_event('primary', event)
+      #redirect_to events_url(calendar_id: params['primary'])
+      result = client.insert_event('primary', event)
+      puts "Event created: #{result.html_link}"
       
     end
     
