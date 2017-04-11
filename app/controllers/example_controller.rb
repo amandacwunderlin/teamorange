@@ -84,7 +84,7 @@ class ExampleController < ApplicationController
       })
       
       
-      result = client.insert_event('primary', event)
+      result = service.insert_event('primary', event)
       puts "Event created: #{result.html_link}"
             
     end
