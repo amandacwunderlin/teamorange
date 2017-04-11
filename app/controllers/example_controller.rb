@@ -74,26 +74,37 @@ class ExampleController < ApplicationController
   
       service = Google::Apis::CalendarV3::CalendarService.new
       service.authorization = client
-  
-  
       
+      event = Google::Apis::CalendarV3::Event.new{
+        summary: 'Google I/O 2015',
+        location: '800 Howard St., San Francisco, CA 94103',
+        description: 'A chance to hear more about Google\'s developer products.',
+        start: {
+          date_time: '2015-05-28T09:00:00-07:00',
+          time_zone: 'America/Los_Angeles',
+        },
+        end: {
+          date_time: '2015-05-28T17:00:00-07:00',
+          time_zone: 'America/Los_Angeles',
+        },
+        recurrence: [
+          'RRULE:FREQ=DAILY;COUNT=2'
+        ],
+        attendees: [
+          {email: 'lpage@example.com'},
+          {email: 'sbrin@example.com'},
+        ],
+        reminders: {
+          use_default: false,
+          overrides: [
+            {method => 'email', 'minutes: 24 * 60},
+            {method => 'popup', 'minutes: 10},
+          ],
+        },
+      }
       
-      event = {
-        'summary' => 'New Event Title',
-        'description' => 'The description',
-        'location' => 'Location',
-        'start' => { 'dateTime' => Chronic.parse('tomorrow 4 pm') },
-        'end' => { 'dateTime' => Chronic.parse('tomorrow 5pm') },
-        'attendees' => [ { "email" => 'bob@example.com' },
-        { "email" =>'sally@example.com' } ] }
-      
-      
-      
-      set_event = client.execute(:api_method => client.events.insert,
-                              :parameters => {'calendarId' => 'primary', 'sendNotifications' => true},
-                              :body => JSON.dump(event),
-                              :headers => {'Content-Type' => 'application/json'})
-      
+      result = client.insert_event('primary', event)
+      puts "Event created: #{result.html_link}"
             
     end
     
