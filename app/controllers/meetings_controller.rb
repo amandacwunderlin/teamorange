@@ -5,17 +5,11 @@ class MeetingsController < ApplicationController
     end
     
     def create
-        @meeting = Meeting.new(params[:meeting])
-        if @meeting.save
-            redirect_to new_meeting_path
-        end
+        @meeting = Meeting.new(params.require(:meeting).permit(:startdate, :enddate, :summary))
+        render text: @meeting.inspect 
     end
     
-    private
     
-    def meeting_params
-      params.require(:meeting).permit(:startdate, :enddate, :summary)
-    end
     
     
     
