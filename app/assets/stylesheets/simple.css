@@ -52,3 +52,7 @@ tr td{
   font-weight:bold;
 }
 
+td input{
+  margin:5px;
+}
+
