@@ -83,6 +83,7 @@ class ExampleController < ApplicationController
         summary: 'New event!'
       })
       
+      
       result = client.insert_event('primary', event)
       puts "Event created: #{result.html_link}"
             
