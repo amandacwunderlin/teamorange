@@ -28,7 +28,7 @@
     <ul>
       <% @event_list.items.each do |event| %>
      <!--   <li><%= event.start %> </li>
-      -->  <li><%= event.end.to_datetime %> </li>
+      -->  <li><%= event.end.to_date %> </li>
         <li><%= event.summary %> </li>
       <% end %>
     </ul>
