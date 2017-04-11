@@ -27,9 +27,10 @@
     
     <ul>
       <% @event_list.items.each do |event| %>
-        <li><%= event.start.date %> </li>
-        <li><%= event.end %> </li>
-        <li><%= event.summary %> </li>
+        <li>Start Date: <%= event.start.date %> </li>
+        <li>End Date: <%= event.end.date %> </li>
+        <li>Description: <%= event.summary %> </li> <br/>
+        
       <% end %>
     </ul>
  
