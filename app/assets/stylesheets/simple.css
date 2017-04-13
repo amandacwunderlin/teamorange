@@ -60,3 +60,10 @@ body
 {
   background-image:url(app/assets/images/MeetrLogo.jpg);
 }
+.button-box{
+  font-family:Open Sans;
+  font-weight:bold;
+  text-align:center;
+  background-color:#C0D5EF;
+  border:black;
+}
