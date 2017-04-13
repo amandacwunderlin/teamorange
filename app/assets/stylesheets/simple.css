@@ -56,3 +56,7 @@ td input{
   margin:5px;
 }
 
+body
+{
+  background-image:url(app/assets/images/MeetrLogo.jpg);
+}
