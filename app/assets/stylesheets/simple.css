@@ -64,6 +64,8 @@ body
   font-family:Open Sans;
   font-weight:bold;
   text-align:center;
+  font-size:1.2em;
   background-color:#C0D5EF;
-  border:black;
+  padding:3px 6px 3px 6px;
+  border:2px solid black;
 }
