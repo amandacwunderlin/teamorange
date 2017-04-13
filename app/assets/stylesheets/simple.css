@@ -63,10 +63,13 @@ body
 .button-box{
   font-family:Open Sans;
   font-weight:bold;
-  text-align:center;
   font-size:1.2em;
   background-color:#C0D5EF;
   padding:3px 6px 3px 6px;
   border:2px solid black;
-  width:50%;
+  width:25%;
+  position:relative;
+}
+div{
+  text-align:center;
 }
