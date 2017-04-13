@@ -60,7 +60,14 @@ body
 {
   background-image:url(app/assets/images/MeetrLogo.jpg);
 }
+
+.buttonoutline{
+  margin:auto;
+  display:block;
+}
 .button-box{
+  margin:auto;
+  display:block;
   font-family:Open Sans;
   font-weight:bold;
   font-size:1.2em;
@@ -70,7 +77,4 @@ body
   width:25%;
   position:relative;
 }
-div{
-  margin:auto;
-  display:block;
-}
+
