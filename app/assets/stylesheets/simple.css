@@ -109,5 +109,12 @@ tr input,tr td textarea, tr td select,.firstlabel{
 label{
   display:inline-block;
 }
+body{
+  background-image:url(/assets/meetrtransparent2.png);
+  background-repeat:no-repeat;
+  background-size:60%;
+  background-position:center;
+  background-attachment:fixed;
+}
 
 
