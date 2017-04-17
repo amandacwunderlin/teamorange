@@ -56,10 +56,6 @@ td input{
   margin:5px;
 }
 
-body
-{
-  background-image:url(app/assets/images/MeetrLogo.jpg);
-}
 
 .buttonoutline{
   margin:auto;
@@ -69,12 +65,13 @@ body
   margin:auto;
   display:block;
   text-align:center;
+  color:black;
   font-family:Open Sans;
   font-weight:bold;
   font-size:1.2em;
-  background-color:#C0D5EF;
+  background-color:#98afae;
   padding:3px 6px 3px 6px;
-  border:2px solid black;
+  border:1px solid #336699;
   width:25%;
   position:relative;
 }
