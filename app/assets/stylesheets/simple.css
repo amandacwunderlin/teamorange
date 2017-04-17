@@ -81,4 +81,34 @@ td input{
 .blacktext{
   color:black;
 }
-
+.leftalign{
+  text-align:left;
+}
+.bolder{
+  font-weight:bolder;
+}
+.textboxlarge
+{
+  height:100px;
+  word-wrap:break-word;
+}
+.textbox{
+  width:300px;
+  
+}
+table{
+  text-align:center;
+}
+tr td{
+  margin-left:10px;
+  text-align:left;
+}
+tr input,tr td textarea, tr td select,.firstlabel{
+  margin-left:25%;
+}
+label{
+  display:inline-block;
+}
+.meetrbackground{
+  background-image:url(/assets/meetrlogo.png);
+}
