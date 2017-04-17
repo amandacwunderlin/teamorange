@@ -27,8 +27,8 @@
     
     <ul>
       <% @event_list.items.each do |event| %>
-        <li><span class="bolder">Start Date:</span><%= event.start.datetime %></li>
-        <li><span class="bolder">End Date:</span> <%= event.end.datetime %> </li>
+        <li><span class="bolder">Start Date:</span><%= event.start.date_time %></li>
+        <li><span class="bolder">End Date:</span> <%= event.end.date_time %> </li>
         <li><span class="bolder">Description:</span> <%= event.summary %> </li> <br/>
         
       <% end %>
