@@ -100,7 +100,7 @@ table{
   text-align:center;
 }
 tr td{
-  margin-left:10px;
+  margin-left:20px;
   text-align:left;
 }
 tr input,tr td textarea, tr td select,.firstlabel{
@@ -109,6 +109,5 @@ tr input,tr td textarea, tr td select,.firstlabel{
 label{
   display:inline-block;
 }
-.meetrbackground{
-  background-image:url(/assets/meetrlogo.png);
-}
+
+
