@@ -70,12 +70,15 @@ td input{
   font-weight:bold;
   font-size:1.2em;
   background-color:#98afae;
-  padding:3px 6px 3px 6px;
+  padding:12px 6px 12px 6px;
   border:1px solid #336699;
   width:25%;
   position:relative;
 }
 .meetrmain{
   text-align:center;
+}
+.blacktext{
+  color:black;
 }
 
