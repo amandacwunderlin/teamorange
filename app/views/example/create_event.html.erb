@@ -11,7 +11,7 @@
     <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-     <style href="app/assets/stylesheets/simple.css">
+    <style type="text/css">
     /*CUSTOM CODE HERE*/
     </style>
 
@@ -21,31 +21,31 @@
 
     <div class="container">
         <div class="text-center">
-            <h1 class="bolder">MEETR</h1>
-                <p class="lead", align = 'center'><i>Create Your Meetings Anytime, Anywhere</i></p>
+            <h1>Meetr</h1>
+                <p class="lead", align = 'center'><i>Create Your Meetings</i></p>
             <br>
- <h2 class="leftalign bolder">Create a Meeting</h2>
+ <h1>Create a Meeting</h1>
     <form >
-    <table class="textbox">
+    <table>
         <tr>
             <td>Meeting ID:</td>
             <td><input type="text" name="meetingId" required autofocus/></td>
         </tr>
         <tr>
             <td>Meeting Title</td>
-            <td><input placeholder="Example:Tax Meeting" type="text" name="meetingTitle" required autofocus/></td>
+            <td><input type="text" name="meetingTitle" required autofocus/></td>
         </tr>
         <tr>
             <td>Meeting Description:</td>
-            <td><textarea placeholder="Example: Meeting with the group to discuss quarterly taxes" class="textboxlarge" type="text" name="meetingDesription" required></textarea></textarea></td>
+            <td><input type="text" name="meetingDesription" required/></td>
         </tr>
         <tr>
             <td>Location:</td>
-            <td><input placeholder="Example: Mankato, MN" type="text" name="meetingLocation" required/></td>
+            <td><input type="text" name="meetingLocation" required/></td>
         </tr>
         <tr>
             <td>Date:</td>
-            <td><input type="date" name="date" required/></td>
+            <td><input type="text" name="date" required/></td>
         </tr>
         <tr>
             <td>Meeting Type:</td>
@@ -68,11 +68,11 @@
             <td><input type="email" name="email" required/></td>
         </tr>
         <tr>
-            <td>Preferred Contact:</td>
+            <td>Preffered Contact:</td>
             <td>
-                <label class="firstlabel"><input type="radio" name="contact" value="mail"/> Mail</label>
+                <label><input type="radio" name="contact" value="mail"/> Mail</label>
                 <label><input type="radio" name="contact" value="phone"/> Phone</label>
-                <label class="firstlabel"><input type="radio" name="contact" value="email"/> Email</label>
+                <label><input type="radio" name="contact" value="email"/> Email</label>
                 <label><input type="radio" name="contact" value="any" checked/> Any</label>
             </td>
         </tr>
