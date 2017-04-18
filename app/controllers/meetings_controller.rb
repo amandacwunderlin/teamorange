@@ -24,6 +24,7 @@ class MeetingsController < ApplicationController
             start: Google::Apis::CalendarV3::EventDateTime.new(date_time: @meeting.startdate.to_datetime ),
             end: Google::Apis::CalendarV3::EventDateTime.new(date_time: @meeting.enddate.to_datetime ),
                 summary: @meeting.summary
+                
               })
               
               
