@@ -17,8 +17,11 @@ ActiveRecord::Schema.define(version: 20170411052251) do
     t.string   "startdate"
     t.string   "enddate"
     t.string   "summary"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "location"
+    t.string   "attendees"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
