@@ -99,9 +99,7 @@
     <%= form_for @meeting do |f| %>
       Start Date: <%= f.text_field :startdate %><br />
       End Date : <%= f.text_field :enddate %><br />
-      location : <%= f.text_field :location %><br />
-      attendees : <%= f.text_field :attendees %><br />
-      description : <%= f.text_field :description %><br />
+      
       Summary : <%= f.text_area :summary %><br />
       <%= f.submit %>
     <% end %>
