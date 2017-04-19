@@ -11,7 +11,7 @@
     <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <style href="app/assets/stylesheets/simple.css">
+    <style type="text/css">
     /*CUSTOM CODE HERE*/
     </style>
 
@@ -21,8 +21,8 @@
 
     <div class="container">
         <div class="text-center">
-            <h1>MEETR</h1>
-                <p class="lead", align = 'center'><i>Create Your Meetings Anytime, Anywhere</i></p>
+            <h1>Meetr</h1>
+                <p class="lead", align = 'center'><i>Create Your Meetings</i></p>
             <br>
  <h1>Create a Meeting</h1>
     <form >
@@ -45,7 +45,7 @@
         </tr>
         <tr>
             <td>Date:</td>
-            <td><input placeholder="mm/dd/yyyy" type="text" name="date" required/></td>
+            <td><input type="text" name="date" required/></td>
         </tr>
         <tr>
             <td>Meeting Type:</td>
@@ -65,10 +65,10 @@
         </tr>
         <tr>
             <td>Admin Email:</td>
-            <td><input placeholder="Enter a valid email address" type="email" name="email" required/></td>
+            <td><input type="email" name="email" required/></td>
         </tr>
         <tr>
-            <td>Preferred Contact:</td>
+            <td>Preffered Contact:</td>
             <td>
                 <label><input type="radio" name="contact" value="mail"/> Mail</label>
                 <label><input type="radio" name="contact" value="phone"/> Phone</label>
@@ -95,24 +95,18 @@
 
     <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    
+
+
+
+
+
     <%= form_for @meeting do |f| %>
       Start Date: <%= f.text_field :startdate %><br />
       End Date : <%= f.text_field :enddate %><br />
       Summary : <%= f.text_area :summary %><br />
       <%= f.submit %>
     <% end %>
-
+    
+    
 </body>
 </html>
-
-
-Testing..<br />
-
-
-<% @meetings.each do |item| %>
-        <%= item.startdate %> <br />
-        <%= item.enddate %><br />
-        <%= item.summary %><br />
-    
-<% end %>
