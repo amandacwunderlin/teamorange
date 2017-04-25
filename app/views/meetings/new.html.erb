@@ -32,6 +32,10 @@
             <td><input type="text" name="meetingId" required autofocus/></td>
         </tr>
         <tr>
+            <%= form_for @meeting do |f| %>
+              Start Date: <%= f.text_field :startdate %><br />
+              End Date : <%= f.text_field :enddate %><br />
+              Summary : <%= f.text_area :summary %><br />
             <td>Meeting Title</td>
             <td><input placeholder="Example:Tax Meeting" type="text" name="meetingTitle" required autofocus/></td>
         </tr>
