@@ -25,17 +25,43 @@
                 <p class="lead", align = 'center'><i>Create Your Meetings Anytime, Anywhere</i></p>
             <br>
  <h2 class="leftalign bolder">Create a Meeting</h2>
+    
+    <%= form_for @meeting do |f| %>
+      
+      
+      <p>
+          Meeting ID: <%= f.text_field :meetingId %><br />
+      </p>
+      
+      <p>
+          Start Date: <%= f.text_field :startdate %><br />
+      </p>
+      
+      <p>
+          End Date : <%= f.text_field :enddate %><br />
+      </p>
+      
+      <p>
+          Meeting Description : <%= f.text_area :summary %><br />
+      </p>
+      
+      
+      
+      
+      
+      <%= f.submit %>
+    <% end %>
+    
+    
     <form >
+        
+        
     <table class="textbox">
         <tr>
             <td>Meeting ID:</td>
             <td><input type="text" name="meetingId" required autofocus/></td>
         </tr>
         <tr>
-            <%= form_for @meeting do |f| %>
-              Start Date: <%= f.text_field :startdate %><br />
-              End Date : <%= f.text_field :enddate %><br />
-              Summary : <%= f.text_area :summary %><br />
             <td>Meeting Title</td>
             <td><input placeholder="Example:Tax Meeting" type="text" name="meetingTitle" required autofocus/></td>
         </tr>
@@ -100,12 +126,7 @@
     <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-    <%= form_for @meeting do |f| %>
-      Start Date: <%= f.text_field :startdate %><br />
-      End Date : <%= f.text_field :enddate %><br />
-      Summary : <%= f.text_area :summary %><br />
-      <%= f.submit %>
-    <% end %>
+    
     
     
 </body>
