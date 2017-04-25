@@ -4,13 +4,8 @@ class CreateMeetings < ActiveRecord::Migration
       t.string :startdate
       t.string :enddate
       t.string :summary
-      t.string :location
-      t.string :attendees
-      t.string :description
-      
+
       t.timestamps null: false
     end
-    
-    
   end
 end
