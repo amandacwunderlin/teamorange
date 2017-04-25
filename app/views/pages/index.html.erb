@@ -21,13 +21,15 @@
     <div class="meetrmain">
     <h1>MEETR</h1>
     <p>Create Your Meetings Anytime or Anywhere</p>
-    <div class="button-box">
-    <img src="/assets/twitter.png" style="float:left; margin-top:-12px;">
+    
     <% if current_user %>
     <% else %>
-    <%= link_to 'Login with Twitter', '/auth/twitter', class:'blacktext' %>
+        <div class="button-box">
+        <img src="/assets/twitter.png" style="float:left; margin-top:-12px;">
+        <%= link_to 'Login with Twitter', '/auth/twitter', class:'blacktext' %>
+        </div>
     <% end %>
-    </div>
+    
     </div>
 
 
